@@ -1,3 +1,4 @@
+![Release](https://img.shields.io/github/v/release/phamhoangtuan/setup_python_project?color=brightgreen&sort=semver)
 [![Linting](https://github.com/phamhoangtuan/setup_python_project/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/phamhoangtuan/setup_python_project/actions/workflows/lint.yml)
 [![Testing](https://github.com/phamhoangtuan/setup_python_project/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/phamhoangtuan/setup_python_project/actions/workflows/test.yml)
 [![Documentation](https://github.com/phamhoangtuan/setup_python_project/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/phamhoangtuan/setup_python_project/actions/workflows/pages.yml)
@@ -31,4 +32,9 @@ mkdocs build
 mkdocs gh-deploy -m "docs: update documentation" -v --force
 
 poetry add --group docs "mkdocstrings[python]"
+
+git tag -a v0.1.0 -m "version v0.1.0"
+git push origin v0.1.0
+
+poetry add --group semver python-semantic-release
 ```
