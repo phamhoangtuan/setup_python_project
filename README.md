@@ -25,4 +25,7 @@ make unit-tests
 make unit-tests-cov
 make clean-cov
 
+poetry add --group docs mkdocs mkdocs-material
+mkdocs build
+mkdocs gh-deploy -m "docs: update documentation" -v --force
 ```

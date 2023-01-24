@@ -32,6 +32,8 @@ lint-mypy-report: # run mypy & create report
 
 lint: lint-black lint-isort lint-flake8 lint-mypy ## run all linters
 
+##@ Unit test
+
 unit-tests:
 	@pytest
 unit-tests-cov:
@@ -43,3 +45,12 @@ clean-cov:
 	@rm -rf htmlcov
 	@rm -rf pytest.xml
 	@rm -rf pytest-coverage.txt
+
+##@ Documentation
+
+docs-build: ## build documentation locally
+	@mkdocs build
+docs-deploy: ## build & deploy documentation to "gh-pages" branch
+	@mkdocs gh-deploy -m "docs: update documentation" -v --force
+clean-docs: ## remove output files from mkdocs
+	@rm -rf site
