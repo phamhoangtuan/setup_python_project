@@ -14,6 +14,7 @@ def foo(a: int, b: int) -> int:
         3
         >>> foo(a=4, b=15)
         19
+
     Args:
         a: This is the first summand
         b: This is the second summand
