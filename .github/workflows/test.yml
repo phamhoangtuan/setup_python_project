@@ -9,12 +9,11 @@ on:
     branches:
       - main
 
+permissions: read-all|write-all
+
 jobs:
   Testing:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-      issues: write
     steps:
       # check-out repo
       - name: Checkout repository
