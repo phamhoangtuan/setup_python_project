@@ -32,8 +32,8 @@ jobs:
         run: poetry install --only semver
       # semantic release
       - name: Python Semantic Release
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        # env:
+        #   GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           set -o pipefail
           # Set git details
